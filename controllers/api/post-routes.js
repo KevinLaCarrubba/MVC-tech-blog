@@ -10,7 +10,7 @@ router.post("/", withAuth, async (req, res) => {
       // TODO: POST BODY SENT IN REQUEST. HINT USING SPREAD
       ...body,
       // TODO: SET USERID userId TO LOGGEDIN USERID
-      user_id: req.session.user_id,
+      userId: req.session.userId,
     });
     res.json(newPost);
   } catch (err) {
